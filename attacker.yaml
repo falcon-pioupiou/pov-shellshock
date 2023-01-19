@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: cspovattacker
   labels:
-    app.kubernetes.io/name: cspovattacker
+    app.kubernetes.io/name: cs-pov-attacker
     app.kubernetes.io/part-of: crowdstrike-demo
     app.kubernetes.io/created-by: crowdstrike
 spec:
   selector:
     matchLabels:
-      run: cspovattacker
+      run: cs-pov-attacker
   replicas: 1
   template:
     metadata:
       labels:
         run: cspovattacker
-        app.kubernetes.io/name: cspovattacker
+        app.kubernetes.io/name: cs-pov-attacker
         app.kubernetes.io/part-of: crowdstrike-demo
         app.kubernetes.io/created-by: crowdstrike
       annotations:
