@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Content-type: text/html";
+echo ""
+
+/bin/cat << EOM
+<pre>
+EOM
+
+echo `date`
+echo `uptime`
+echo "<br />"
+network=`/bin/netstat -an 2>/dev/null`
+echo "$network"
+
+/bin/cat << EOM
+</pre>
+EOM
