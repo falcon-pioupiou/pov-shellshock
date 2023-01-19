@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cspovattacker
+  name: cs-pov-attacker
   labels:
     app.kubernetes.io/name: cs-pov-attacker
     app.kubernetes.io/part-of: crowdstrike-demo
@@ -14,12 +14,12 @@ spec:
   template:
     metadata:
       labels:
-        run: cspovattacker
+        run: cs-pov-attacker
         app.kubernetes.io/name: cs-pov-attacker
         app.kubernetes.io/part-of: crowdstrike-demo
         app.kubernetes.io/created-by: crowdstrike
       annotations:
-        sensor.falcon-system.crowdstrike.com/injection: enabled
+        sensor.falcon-system.crowdstrike.com/injection: disabled
     spec:
       containers:
         - name: app

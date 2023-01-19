@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cspovshellshock
+  name: cs-pov-victim
   labels:
     app.kubernetes.io/name: cs-pov-victim
     app.kubernetes.io/part-of: crowdstrike-demo
@@ -9,12 +9,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      run: cspovshellshock
+      run: cs-pov-victim
   replicas: 1
   template:
     metadata:
       labels:
-        run: cspovshellshock
+        run: cs-pov-victim
         app.kubernetes.io/name: cs-pov-victim
         app.kubernetes.io/part-of: crowdstrike-demo
         app.kubernetes.io/created-by: crowdstrike
