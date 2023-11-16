@@ -26,5 +26,5 @@ spec:
           image: falconpioupiou/shellshock:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               name: web
