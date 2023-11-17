@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: cs-pov-victim
 spec:
+  type: LoadBalancer
   selector:
     app.kubernetes.io/name: cs-pov-victim
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer
